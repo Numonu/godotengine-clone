@@ -1,5 +1,6 @@
 ---
-
+// Supports weights 100-900
+import '@fontsource-variable/montserrat';
 ---
 
 <html lang="en">
@@ -9,6 +10,11 @@
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
+		<style>
+			body{
+				font-family : "Montserrat Variable" , sans-serif;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Astro</h1>
