@@ -1,0 +1,113 @@
+---
+import Donate from "../atoms/Donate.astro";
+import NavItem from "../atoms/NavItem.astro";
+const hamburger = "hamburger_btn";
+const header = "header_el";
+const nav = "nav_el";
+
+const nav_links = [
+	{ label: "features", link: "#" },
+	{ label: "blog", link: "#" },
+	{ label: "community", link: "#" },
+	{ label: "about", link: "#" },
+	{ label: "assets", link: "#" },
+	{ label: "download", link: "#" },
+	{ label: "learn", link: "#" },
+	{ label: "contribute", link: "#" },
+];
+---
+
+<script defer define:vars={{ hamburger, header, nav }}>
+const media = window.matchMedia("(min-width : 768px)");
+let hamburgerBtn;
+let headerEl;
+let navEl;
+const allDependencies = () => hamburgerBtn && headerEl && navEl;
+
+media.onchange = (e) => {
+	if (e.matches && allDependencies()) {
+		headerEl.classList.remove("header");
+		navEl.classList.remove("nav");
+	}
+};
+
+window.onload = () => {
+	hamburgerBtn = document.getElementById(hamburger);
+	headerEl = document.getElementById(header);
+	navEl = document.getElementById(nav);
+
+	if (allDependencies()) {
+		hamburgerBtn.addEventListener("click", () => {
+			headerEl.classList.toggle("header");
+			navEl.classList.toggle("nav");
+		});
+	}
+};
+</script>
+<style>
+	.header {
+		background-color: #333639;
+	}
+	.nav {
+		display: block;
+	}
+</style>
+<header id={header}>
+	<div class="flex justify-between">
+		<div
+			class="w-full flex justify-between px-6 xl:w-auto xl:justify-start xl:gap-4"
+		>
+			<a class="bg-white bg-opacity-0 px-2 flex justify-center hover:bg-opacity-10" href="#">
+				<img width="136" height="48" src="svg/logo_dark.svg" alt="" />
+			</a>
+			<button id={hamburger} class="pl-4 py-6 brightness-[100] xl:hidden">
+				<img src="svg/hamburger.svg" alt="hamburger button" />
+			</button>
+			{
+				(
+					<nav class="hidden xl:block">
+						<ul class="h-full flex">
+							{nav_links
+								.map((e) => <NavItem label={e.label} />)
+								.slice(0, 5)}
+						</ul>
+					</nav>
+				)
+			}
+		</div>
+
+		<div
+			class="hidden justify-between px-6 xl:flex xl:justify-start xl:gap-12"
+		>
+			{
+				(
+					<nav class="hidden xl:block">
+						<ul class="h-full flex">
+							{nav_links
+								.map((e) => <NavItem label={e.label} />)
+								.slice(5)}
+							<Donate />
+						</ul>
+					</nav>
+				)
+			}
+		</div>
+	</div>
+	<nav id={nav} class="bg-[#333639] py-4 hidden">
+		<ul>
+			{
+				nav_links.map((e) => (
+					<li>
+						<a
+							class="bg-white text-white w-full inline-block px-[1.5rem] py-[0.75rem] font-bold capitalize bg-opacity-0 hover:bg-opacity-10 transition-opacity"
+							href={e.link}
+						>
+							{e.label}
+						</a>
+					</li>
+				))
+			}
+			<Donate />
+		</ul>
+	</nav>
+</header>
