@@ -1,6 +1,10 @@
 ---
 // Supports weights 100-900
-import '@fontsource-variable/montserrat';
+import "@fontsource-variable/montserrat";
+import Header from "../components/organisms/Header.astro";
+import ParallaxBg from "../components/molecules/ParallaxBg.astro";
+import Wrapper from "../components/atoms/Wrapper.astro";
+import Hero from "../components/organisms/Hero.astro";
 ---
 
 <html lang="en">
@@ -9,14 +13,30 @@ import '@fontsource-variable/montserrat';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Godot Engine - Free and open source 2D and 3D game engine</title>
 		<style>
-			body{
-				font-family : "Montserrat Variable" , sans-serif;
+			body {
+				font-family: "Montserrat Variable", sans-serif;
 			}
 		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="min-h-[200vh]">
+			<ParallaxBg
+				path="https://godotengine.org/assets/showcase/cassette-beasts-3.webp"
+			>
+				<div class="bg-neutral-50 bg-opacity-10 backdrop-blur-md">
+					<Wrapper>
+						<Header />
+					</Wrapper>
+				</div>
+				<Wrapper>
+					<Hero />
+				</Wrapper>
+			</ParallaxBg>
+		</div>
+		<script
+			src="https://kit.fontawesome.com/65a19dc040.js"
+			crossorigin="anonymous"></script>
 	</body>
 </html>
