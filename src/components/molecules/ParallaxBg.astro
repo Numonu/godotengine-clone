@@ -1,0 +1,21 @@
+---
+interface Props {
+    path : string,
+}
+const {path} = Astro.props;
+---
+<script>
+    window.onload = () => {
+        const parallax : HTMLElement | null = document.querySelector("#parallax");
+        window.addEventListener("scroll" , (e) => {
+            const translate = window.scrollY * 0.3;
+            if(parallax){
+                parallax.style.transform = `translateY(${translate}px)`;
+            }          
+        })
+    }
+</script>
+<section class="relative isolate overflow-hidden">
+    <div id="parallax" class="absolute -z-10 w-full h-full bg-cover bg-center" style=`background-image: linear-gradient(rgba(0,0,30,.5) , rgba(0,0,30,.5)) , url(${path});`></div>
+    <slot/>
+</section>
