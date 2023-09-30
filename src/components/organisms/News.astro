@@ -1,0 +1,51 @@
+---
+import ArticleItem from "../atoms/ArticleItem.astro";
+---
+
+<section class="px-2 pt-8 mb-24">
+	<h2 class="text-neutral-200 mb-8 text-4xl font-extrabold">Latest news</h2>
+	<div class="grid gap-8 md:grid-cols-2">
+		<article class="cursor-pointer group">
+			<figure
+				class="shadow-zinc-900 mb-4 overflow-hidden rounded-lg shadow-md group-hover:brightness-125"
+			>
+				<img
+					src="https://godotengine.org/storage/blog/covers/maintenance-release-godot-3-5-3.webp"
+					alt="mantenance release"
+				/>
+			</figure>
+			<h3 class="text-neutral-200 text-xl font-bold mb-4">
+				Maintenance release: Godot 3.5.3
+			</h3>
+			<p class="text-neutral-400">
+				It's been way too long since our previous 3.5 maintenance
+				release! This new Godot 3.5.3 fixes a number of important issues
+				and adjusts to changing platform requirements.
+			</p>
+		</article>
+		<div class="flex flex-col gap-7">
+			<ArticleItem
+				url="https://godotengine.org/storage/blog/covers/release-candidate-godot-4-1-2-rc-1.webp"
+				title="Release candidate: Godot 4.1.2 RC1"
+				description="It's long overdue for the second Godot 4.1 patch release! This release candidate contains a number o..."
+			/>
+			<ArticleItem
+				url="https://godotengine.org/storage/blog/covers/dev-snapshot-godot-4-2-dev-5.webp"
+				title="Dev snapshot : Godot 4.2 dev 5"
+				description="Penultimate 4.2 dev snapshot brings improvements to Android plugin API, the Tilemap editor, and, wel..."
+			/>
+			<ArticleItem
+				url="https://godotengine.org/storage/blog/covers/developer-fund.jpg"
+				title="Introducing the new Godot Development Fund"
+				description="We are excited to introduce a major improvement in terms of funding the development efforts of the G..."
+			/>
+			<div class="flex justify-end">
+				<button
+					class="shadow-zinc-900 bg-zinc-700 text-neutral-100 w-max py-3 px-8 shadow-md font-extrabold text-lg hover:brightness-125"
+				>
+					More News
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
