@@ -1,0 +1,24 @@
+---
+interface Props {
+    title : string,
+    description : string,
+    url : string
+}
+const {title , description , url} = Astro.props;
+---
+<article class="grid grid-cols-[80px_1fr] gap-5 sm:grid-cols-[160px_1fr] cursor-pointer group">
+	<figure class="shadow-zinc-900 h-min overflow-hidden rounded-lg shadow-md group-hover:brightness-125">
+		<img
+			src={url}
+			alt="mantenance release"
+		/>
+	</figure>
+	<div>
+		<h3 class="text-neutral-200 mb-2 text-xl font-bold">
+			{title}
+		</h3>
+		<p class="text-neutral-400 hidden sm:block">
+			{description}
+		</p>
+	</div>
+</article>
