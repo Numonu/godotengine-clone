@@ -5,6 +5,11 @@ import Header from "../components/organisms/Header.astro";
 import ParallaxBg from "../components/molecules/ParallaxBg.astro";
 import Wrapper from "../components/atoms/Wrapper.astro";
 import Hero from "../components/organisms/Hero.astro";
+import News from "../components/organisms/News.astro";
+import Features from "../components/organisms/Features.astro";
+import Topics from "../components/organisms/Topics.astro";
+import Foundation from "../components/organisms/Foundation.astro";
+import Sponsors from "../components/organisms/Sponsors.astro";
 ---
 
 <html lang="en">
@@ -21,7 +26,7 @@ import Hero from "../components/organisms/Hero.astro";
 		</style>
 	</head>
 	<body>
-		<div class="min-h-[200vh]">
+		<div class="bg-[#25282b]">
 			<ParallaxBg
 				path="https://godotengine.org/assets/showcase/cassette-beasts-3.webp"
 			>
@@ -34,9 +39,23 @@ import Hero from "../components/organisms/Hero.astro";
 					<Hero />
 				</Wrapper>
 			</ParallaxBg>
+			<Wrapper>
+				<News />
+				<Features />
+				<Topics />
+			</Wrapper>
+			<Foundation />
+			<Wrapper>
+				<Sponsors/>
+			</Wrapper>
+			<footer class="bg-zinc-700 py-6">
+				<span class="text-white w-max block mx-auto text-center">
+					Clone made by <a class="text-blue-500 underline" target="_blank" href="https://github.com/Numonu">Numonu</a>
+				</span>
+			</footer>
+			<script
+				src="https://kit.fontawesome.com/65a19dc040.js"
+				crossorigin="anonymous"></script>
 		</div>
-		<script
-			src="https://kit.fontawesome.com/65a19dc040.js"
-			crossorigin="anonymous"></script>
 	</body>
 </html>
