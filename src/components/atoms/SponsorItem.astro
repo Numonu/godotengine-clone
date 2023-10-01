@@ -1,0 +1,9 @@
+---
+interface Props {
+     url : string,
+}
+const {url} = Astro.props;
+---
+<figure class="bg-[#e2ebfa] hover:bg-white rounded-lg cursor-pointer py-6">
+    <img class="mix-blend-multiply mx-auto aspect-[25/9] w-1/2 object-contain" src={url} alt="some image">
+</figure>
