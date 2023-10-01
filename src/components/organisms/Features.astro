@@ -1,0 +1,46 @@
+---
+import GodotBtn from "../atoms/GodotBtn.astro";
+import SectionTitle from "../atoms/SectionTitle.astro";
+import FeatCard from "../molecules/FeatCard.astro";
+---
+
+<section class="px-2 mb-24">
+	<SectionTitle>A different way to make games</SectionTitle>
+	<div class="mb-8 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+		<FeatCard
+			url="https://godotengine.org/assets/home/features/innovative.webp"
+			title="Innovative design"
+			description="Godot's Node and Scene system gives you  both power and flexibility to create anything."
+		/>
+		<FeatCard
+			url="https://godotengine.org/assets/home/features/language.webp"
+			title="Use the right language for the jon"
+			description="Keep your code modular with an object-oriented API using Godot's own GDScript, C#, C++, or bring your own using GDExtension"
+		/>
+		<FeatCard
+			url="https://godotengine.org/assets/home/features/2d.webp"
+			title="Dedicated 2D engine"
+			description="Make crisp and performant 2D games with Godot's dedicated 2D rendering engine with real 2D pixel coordinates and 2D nodes"
+		/>
+		<FeatCard
+			url="https://godotengine.org/assets/home/features/3d.webp"
+			title="Simple and powerful 3D"
+			description="Godot's 3D nodes give you everything you need to build, animate, and render you 3D worlds and characters"
+		/>
+        <FeatCard
+			url="https://godotengine.org/assets/home/features/cross-platform.svg"
+			title="Release on all platforms"
+			description="Deploy your game on desktop, mobile, and the web in seconds. Godot even supports consoles through third party publishers"
+		/>
+        <FeatCard
+			url="https://godotengine.org/assets/home/features/oss.svg"
+			title="Open Source"
+			description="Truly open development: anyone who contributes to Godot benefits equally from others contributions"
+		/>
+	</div>
+	<footer class="flex justify-center">
+		<GodotBtn>
+			Learn more about using Godot
+		</GodotBtn>
+	</footer>
+</section>
