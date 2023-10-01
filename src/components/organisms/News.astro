@@ -1,9 +1,11 @@
 ---
 import ArticleItem from "../atoms/ArticleItem.astro";
+import GodotBtn from "../atoms/GodotBtn.astro";
+import SectionTitle from "../atoms/SectionTitle.astro";
 ---
 
 <section class="px-2 pt-16 mb-24">
-	<h2 class="text-neutral-200 mb-8 text-4xl font-extrabold">Latest news</h2>
+	<SectionTitle>Latest News</SectionTitle>
 	<div class="grid gap-8 md:grid-cols-2">
 		<article class="cursor-pointer group">
 			<figure
@@ -40,11 +42,9 @@ import ArticleItem from "../atoms/ArticleItem.astro";
 				description="We are excited to introduce a major improvement in terms of funding the development efforts of the G..."
 			/>
 			<div class="flex justify-end">
-				<button
-					class="shadow-zinc-900 bg-zinc-700 text-neutral-100 w-max py-3 px-8 shadow-md font-extrabold text-lg hover:brightness-125"
-				>
+				<GodotBtn>
 					More News
-				</button>
+				</GodotBtn>
 			</div>
 		</div>
 	</div>
