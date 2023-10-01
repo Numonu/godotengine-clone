@@ -1,0 +1,26 @@
+---
+import GodotBtn from "../atoms/GodotBtn.astro";
+interface Props {
+    url : string,
+    title : string,
+    description : string,
+}
+const {url , title , description} = Astro.props;
+---
+
+<article class="md:w-[45%] lg:w-[28%]">
+	<figure>
+		<img
+			class="mx-auto"
+			src={url}
+			alt="some svg"
+		/>
+	</figure>
+	<div class="text-center">
+		<h3 class="text-neutral-200 mb-6 text-2xl font-extrabold">{title}</h3>
+		<p class="text-neutral-300 mb-6 text-lg">
+			{description}
+		</p>
+		<GodotBtn>Learn more</GodotBtn>
+	</div>
+</article>
