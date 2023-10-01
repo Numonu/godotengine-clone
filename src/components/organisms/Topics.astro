@@ -1,0 +1,31 @@
+---
+import SectionTitle from "../atoms/SectionTitle.astro";
+import TopicCard from "../molecules/TopicCard.astro";
+---
+
+<section class="px-2">
+	<header class="mb-12">
+		<SectionTitle>Get involved</SectionTitle>
+		<p class="text-neutral-300">
+			Join the community and help create a game engine that belongs to
+			everybody
+		</p>
+	</header>
+	<div class="flex flex-wrap justify-center gap-16">
+		<TopicCard
+			url="https://godotengine.org/assets/home/code.svg"
+			title="Code"
+			description="If you know how to code, you can help by fixing bugs and workin with engine contributors towards the implementation of new features."
+		/>
+		<TopicCard
+			url="https://godotengine.org/assets/home/document.svg"
+			title="Document"
+			description="Documentation quality is essential in a game engine; help make it better by updating the API reference, writing new guides or submitting corrections."
+		/>
+		<TopicCard
+			url="https://godotengine.org/assets/home/report.svg"
+			title="Report"
+			description="Found a problem with the engine? Don't forget to report it so that developers can track it down."
+		/>
+	</div>
+</section>
