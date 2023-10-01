@@ -1,0 +1,70 @@
+---
+import SectionTitle from "../atoms/SectionTitle.astro";
+import SponsorItem from "../atoms/SponsorItem.astro";
+---
+
+<section class="px-2 mb-24">
+	<SectionTitle>Godot is sponsored by:</SectionTitle>
+	<div class="flex flex-col gap-12">
+		<div>
+			<h3 class="text-neutral-300 text-2xl font-bold mb-5">
+				Sponsor Platinum
+			</h3>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/ossc-logo.svg"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/gamblify.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/spiffcode.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/heroiclabs.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/w4.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/w4.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/ramatak.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/re-logic.png"
+				/>
+			</div>
+		</div>
+		<div>
+			<h3 class="text-neutral-300 text-2xl font-bold mb-5">
+				Sponsor Gold
+			</h3>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:w-[70%]">
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/pt.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/robot-gentleman.png"
+				/>
+			</div>
+		</div>
+        <div>
+			<h3 class="text-neutral-300 text-2xl font-bold mb-5">
+				Sponsor Silver
+			</h3>
+			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 md:w-[70%]">
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/affray-interactive.png"
+				/>
+				<SponsorItem
+					url="https://fund.godotengine.org/static/logos/playful-studios.png"
+				/>
+			</div>
+		</div>
+        <footer class="text-neutral-300 text-lg">
+            If you want to sponsor the project, please write to <a class="text-blue-400 underline" href="mailto:contact@godot.foundation">contact@godot.foundation.</a>
+        </footer>
+	</div>
+</section>
