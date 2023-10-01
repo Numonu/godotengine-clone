@@ -1,25 +1,30 @@
 ---
 interface Props {
-    url : string,
-    title : string,
-    description : string,
+	url: string;
+	title: string;
+	description: string;
 }
-const {url , title , description} = Astro.props;
+const { url, title, description } = Astro.props;
 ---
-<article class="bg-[#313c60] rounded-xl overflow-hidden  cursor-pointer transition-transform hover:brightness-125 hover:-translate-y-1">
-	<figure>
-		<img
-			class="w-full aspect-[3/2] object-cover bg-top"
-			src={url}
-			alt="some image"
-		/>
-	</figure>
-	<div class="p-6">
-		<h3 class="text-neutral-200 mb-2 font-extrabold text-xl">
-			{title}
-		</h3>
-		<p class="text-neutral-300">
-			{description}
-		</p>
-	</div>
-</article>
+
+<a href="#">
+	<article
+		class="bg-[#313c60] rounded-xl overflow-hidden cursor-pointer transition-transform hover:brightness-125 hover:-translate-y-1"
+	>
+		<figure>
+			<img
+				class="w-full aspect-[3/2] object-cover bg-top"
+				src={url}
+				alt="some image"
+			/>
+		</figure>
+		<div class="p-6">
+			<h3 class="text-neutral-200 mb-2 font-extrabold text-xl">
+				{title}
+			</h3>
+			<p class="text-neutral-300">
+				{description}
+			</p>
+		</div>
+	</article>
+</a>
